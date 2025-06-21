@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="rrtl">
 <head>
   <meta charset="UTF-8" />
   <title>Flexbox Layout mit Bootstrap</title>
@@ -9,23 +9,28 @@
   
 
 <!-- Fixed Navbar -->
-<nav class="navbar align-items-start">
-  <div class="container-fluid bg-dark mx-5 rounded ">    
+<nav class="navbar align-items-start bg-dark">
+  <div class="container-fluid mx-4">    
     <a class="navbar-brand" href="#">
-      <img src="logo.png" alt="Your Logo" width="30" height="30">
+      <img src="../assets/logo.png" alt="Your Logo" width="36" height="36">
     </a>
-    <a class="nav-item text-white" href="#" onclick="sortieren('rang')">Unternehmen</a>
-    <a class="nav-item text-white" href="#">Länder</a>
-    <a class="nav-item text-white" href="#">FAQ</a>
+    
+    <div class="navbar-nav flex-row gap-4">
+      <a class="nav-link text-white" href="#">Unternehmen</a>
+      <a class="nav-link text-white" href="#">Länder</a>
+      <a class="nav-link text-white" href="#">FAQ</a>
+    </div>
     
   </div>
 </nav>
 
 <!-- Hauptbereich: Sidebar + Inhalt nebeneinander -->
-<div class="d-flex" style="height: calc(100vh - 56px);">
+<div class="d-flex" style="height: calc(100vh - 120px);">
   
   
-  <aside class=" text-dark d-lg-flex flex-column justify-content-center mx-3 d-none ">
+ 
+
+  <aside id="sidebar" class="text-dark d-lg-flex flex-column justify-content-center mx-3 d-none ">
     <div class="px-3">
       <ul class="nav flex-column">
         <li class="nav-item"><a class="nav-link text-primary" href="#hl1">Emmisionstabelle</a></li>
@@ -37,7 +42,6 @@
 
   <!-- Hauptinhalt mit Scroll -->
   <main class="flex-grow-1 overflow-auto p-3">
-   
    
    <div class="container">
 
@@ -66,12 +70,15 @@
     </table>
 
   </div>
-
-  
-
   </main>
 
 </div>
+
+<footer class="mt-auto bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">© 2025 NPO. All rights reserved.</p>
+  </div>
+</footer>
 
     
 

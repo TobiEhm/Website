@@ -88,3 +88,13 @@ function resetFilter() {
   filteredData = [...alldata];
   buildTable();
 }
+
+ document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.getElementById('sidebar');
+    const main = sidebar.parentElement;
+    if (document.documentElement.dir === 'rtl') {
+      main.appendChild(sidebar); // Sidebar nach rechts verschieben
+    } else {
+      main.insertBefore(sidebar, main.firstChild); // Sidebar nach links
+    }
+  });
